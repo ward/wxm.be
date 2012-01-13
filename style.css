@@ -1,0 +1,25 @@
+body {
+	font-family: Ubuntu, sans-serif;
+	background-color: #EEEEEE;
+	margin-bottom: 0px;
+	margin-right: 0px;
+	margin-left: 30px;
+	margin-top: 30px;
+	padding: 0px;
+}
+section ul {
+	list-style-type: square;
+}
+footer {
+	font-size: x-small;
+}
+a {
+	color: blue;
+	-moz-transition: 500ms linear 0s;
+	-webkit-transition: 500ms linear 0s;
+	-o-transition: 500ms linear 0s;
+	transition: 500ms linear 0s;
+}
+a:hover {
+	color: green;
+}
