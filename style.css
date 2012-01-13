@@ -1,20 +1,110 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* End CSS reset */
+
+
+/* Own styling */
 body {
 	font-family: Ubuntu, sans-serif;
 	background-color: #EEEEEE;
-	margin-bottom: 0px;
-	margin-right: 0px;
-	margin-left: 30px;
-	margin-top: 30px;
-	padding: 0px;
 }
-section ul {
+
+body header {
+	padding-top: 2em;
+	padding-bottom: 1.23em;
+	padding-left: 4em;
+	padding-right: 1em;
+	background-color: darkgreen;
+	color: #EEEEEE;
+}
+
+body header h1 {
+	font-variant: small-caps;
+	font-size: xx-large;
+	font-weight: bold;
+}
+
+body section {
+	height: auto;
+	margin-left: 1em;
+}
+
+body section h1 {
+	padding-top: 1em;
+	padding-bottom: 0.5em;
+	padding-left: 0.2em;
+	font-size: x-large;
+	font-weight: bold;
+}
+
+body section p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+body section ul {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	line-height: 1.1;
+	padding-left: 2em;
 	list-style-type: square;
+	list-style-position: inside;
 }
-footer {
-	font-size: x-small;
+body footer {
+	border-top: 1px solid green;
+	margin-top: 2em;
+	padding-top: 1em;
+	padding-left: 1em;
+	padding-bottom: 2em;
+	font-size: small;
 }
 a {
-	color: blue;
+	color: darkviolet;
 	-moz-transition: 500ms linear 0s;
 	-webkit-transition: 500ms linear 0s;
 	-o-transition: 500ms linear 0s;
