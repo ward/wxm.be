@@ -1,2 +1,3 @@
 User-Agent: *
 Disallow: /irc/logs/
+Disallow: /dll/
