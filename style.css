@@ -50,7 +50,7 @@ table {
 
 /* Own styling */
 body {
-	font-family: Ubuntu, sans-serif;
+	font-family: "Charis SIL", serif;
 	background-color: #EEEEEE;
 }
 
@@ -69,6 +69,24 @@ body header h1 {
 	font-weight: bold;
 }
 
+body header h1 a {
+	color: #EEEEEE;
+	text-decoration: none;
+}
+
+body header li {
+	display: inline;
+}
+
+body header li a {
+	color: #000000;
+	transition: 500ms linear 0s;
+}
+
+body header li a:hover {
+	color: #FFFFFF;
+}
+
 body section {
 	height: auto;
 	margin-left: 1em;
@@ -77,21 +95,35 @@ body section {
 body section h1 {
 	padding-top: 1em;
 	padding-bottom: 0.5em;
-	padding-left: 0.2em;
 	font-size: x-large;
 	font-weight: bold;
 }
 
+body section h2 {
+	padding-top: 1em;
+	padding-bottom: 0.5em;
+	padding-left: 0.5em;
+	font-size: large;
+	font-weight: bold;
+}
+
+body section h3 {
+	padding-left: 2em;
+	font-weight: bold;
+}
+
 body section p {
+	padding-left: 2em;
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
+	width: 35em;
 }
 
 body section ul {
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
 	line-height: 1.1;
-	padding-left: 2em;
+	padding-left: 3em;
 	list-style-type: square;
 	list-style-position: inside;
 }
@@ -103,13 +135,10 @@ body footer {
 	padding-bottom: 2em;
 	font-size: small;
 }
-a {
+body section a {
 	color: darkviolet;
-	-moz-transition: 500ms linear 0s;
-	-webkit-transition: 500ms linear 0s;
-	-o-transition: 500ms linear 0s;
 	transition: 500ms linear 0s;
 }
-a:hover {
+body section a:hover {
 	color: green;
 }
