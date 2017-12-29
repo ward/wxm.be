@@ -1,1 +1,1 @@
-Basic files for [wardje.eu](http://wardje.eu/).
+Basic files for [wxm.be](https://wxm.be/).
