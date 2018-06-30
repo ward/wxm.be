@@ -13,6 +13,9 @@ function run() {
   let birthday_date = document.getElementById("birthday-date").value;
   let birthday_time = document.getElementById("birthday-time").value;
   let birthday = Date.parse(birthday_date + " " + birthday_time);
+  if (!birthday) {
+    return;
+  }
   let age = Math.floor((now - birthday) / 1000);
   let age_in_ms = Math.round(age / 1000 / 1000);
   document.getElementById("age-seconds").innerHTML = formatBigNumber(age);
