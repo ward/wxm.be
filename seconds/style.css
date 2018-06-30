@@ -1,0 +1,11 @@
+body {
+  max-width: 40em;
+  margin: 0px auto;
+}
+table, tr, td, th {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+td:nth-child(2) {
+  text-align: right;
+}
