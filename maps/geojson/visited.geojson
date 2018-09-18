@@ -1,0 +1,535 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "FeatureCollection",
+      "properties": {
+        "name": "North America"
+      },
+      "features": [
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Philadelphia, PA, USA"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -75.16365051269531,
+              39.94922701781798
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Malvern, PA, USA"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -75.51727294921875,
+              40.03681511027442
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "New York City, NY, USA"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -73.970947265625,
+              40.77638178482896
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Washington, DC, USA"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -77.01862335205078,
+              38.89076560366622
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Atlantic City, NJ, USA"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -74.42825317382812,
+              39.36655391329218
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Egg Harbor City, NJ, USA"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -74.6084976196289,
+              39.54217596171196
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Durham, NC, USA"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -78.93436431884766,
+              36.00134056648952
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Harrisburg, PA, USA"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -76.89605712890625,
+              40.271667590444245
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "FeatureCollection",
+      "properties": {
+        "name": "South America"
+      },
+      "features": [
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Buenos Aires, Argentina"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -58.430099487304695,
+              -34.60382391547706
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "FeatureCollection",
+      "properties": {
+        "name": "Europe"
+      },
+      "features": [
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Madrid, Spain"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -3.7023925781249996,
+              40.41767833585549
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "El Escorial, Spain"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -4.146823883056641,
+              40.5920567159421
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Dublin, Ireland"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -6.267013549804687,
+              53.349321688468414
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "London, England"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -0.12651443481445312,
+              51.50746034612789
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Amsterdam, The Netherlands"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              4.898185729980469,
+              52.37497039455815
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Eindhoven, The Netherlands"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              5.480804443359375,
+              51.4413827607524
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Utrecht, The Netherlands",
+            "description": "BENEVOL 2016 conference"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              5.1093292236328125,
+              52.09258577535003
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Genève, Switzerland",
+            "description": "CERN trip with WK"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              6.142730712890625,
+              46.204072064441746
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Bergen, Norway",
+            "description": "SATToSE 2016 conference"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              5.326995849609375,
+              60.391639051370696
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Köln, Germany"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              6.9605255126953125,
+              50.93766174471314
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Düsseldorf, Germany"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              6.772212982177734,
+              51.22204511008647
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Campobasso, Italy",
+            "description": "SANER 2018 conference"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              14.659838676452637,
+              41.559848324822866
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Termoli, Italy"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              14.992561340332031,
+              42.00223864872741
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Pescara, Italy"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              14.217853546142578,
+              42.4661455564613
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Paris, France"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              2.3414611816406246,
+              48.860197534643966
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Prague, Czech Republic"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              14.421787261962889,
+              50.086555986123045
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Vézelay, France"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              3.7449645996093754,
+              47.464772024276016
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Athens, Greece"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              23.72669219970703,
+              37.983310135428795
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Delphi, Greece"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              22.496566772460938,
+              38.47952905516707
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Sparta, Greece"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              22.429962158203125,
+              37.07435402742394
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Olympia, Greece"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              21.624698638916016,
+              37.64393700247622
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Soissons, France"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              3.3231067657470703,
+              49.38220515738613
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Sens, France"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              3.2826805114746094,
+              48.197790343835486
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Laguilo, France"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              2.8471755981445312,
+              44.68378916997173
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Aínsa, France"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              0.1384449005126953,
+              42.416296606448746
+            ]
+          }
+        },
+        {
+          "type": "FeatureCollection",
+          "properties": {
+            "name": "Trip with Chloé"
+          },
+          "features": [
+            {
+              "type": "Feature",
+              "properties": {
+                "name": "Avignon, France"
+              },
+              "geometry": {
+                "type": "Point",
+                "coordinates": [
+                  4.807891845703125,
+                  43.947597087764585
+                ]
+              }
+            },
+            {
+              "type": "Feature",
+              "properties": {
+                "name": "Le Pontet, France"
+              },
+              "geometry": {
+                "type": "Point",
+                "coordinates": [
+                  4.858360290527344,
+                  43.96279694405331
+                ]
+              }
+            },
+            {
+              "type": "Feature",
+              "properties": {
+                "name": "Aigues-Mortes, France"
+              },
+              "geometry": {
+                "type": "Point",
+                "coordinates": [
+                  4.189739227294922,
+                  43.5662129621513
+                ]
+              }
+            },
+            {
+              "type": "Feature",
+              "properties": {
+                "name": "Saintes-Maries-de-la-Mer, France"
+              },
+              "geometry": {
+                "type": "Point",
+                "coordinates": [
+                  4.4268035888671875,
+                  43.451174246924964
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
