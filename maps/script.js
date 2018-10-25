@@ -1,3 +1,5 @@
+const DEFAULT_MAP = 'visited';
+
 function loadJSON(callback, geojson_location) {   
   var xobj = new XMLHttpRequest();
   xobj.overrideMimeType("application/json");
@@ -28,7 +30,14 @@ function handle_geojson(geojson) {
   L.geoJSON(geojson, { onEachFeature: createPopup }).addTo(mymap);
 }
 
+// () -> String
+function get_map_name() {
+  var params = new URLSearchParams(window.location.search);
+  var map_name = params.get('i') || DEFAULT_MAP;
+  return `geojson/${map_name}.geojson`;
+}
+
 document.addEventListener('DOMContentLoaded', function() {
-  loadJSON(handle_geojson, "geojson/visited.geojson");
+  loadJSON(handle_geojson, get_map_name());
 });
 
