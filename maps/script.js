@@ -27,7 +27,8 @@ function handle_geojson(geojson) {
     maxZoom: 18,
   }).addTo(mymap);
 
-  L.geoJSON(geojson, { onEachFeature: createPopup }).addTo(mymap);
+  var geojsonLayer = L.geoJSON(geojson, { onEachFeature: createPopup }).addTo(mymap);
+  mymap.fitBounds(geojsonLayer.getBounds());
 }
 
 // () -> String
