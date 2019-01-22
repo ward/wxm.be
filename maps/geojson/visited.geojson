@@ -110,6 +110,149 @@
               40.271667590444245
             ]
           }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Las Vegas, NV, USA"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -115.136389,
+              36.175
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Death Valley, CA, USA"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -116.816944,
+              36.246944
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Beatty, NV, USA"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -116.754444,
+              36.909444
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Ash Meadows National Wildlife Refuge, NV, USA"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -116.333333,
+              36.425
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Primm, NV, USA"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -115.390278,
+              35.612778
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Mojave National Preserve, CA, USA"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -115.716667,
+              34.883333
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Amboy Crater, CA, USA"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -115.791109,
+              34.543883
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Palm Springs, CA, USA"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -116.545278,
+              33.830278
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Los Angeles, CA, USA"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -118.25,
+              34.05
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Escondido, CA, USA"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -117.080833,
+              33.124722
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "San Diego, CA, USA"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -117.1625,
+              32.715
+            ]
+          }
         }
       ]
     },
