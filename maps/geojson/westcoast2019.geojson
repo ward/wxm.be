@@ -1,0 +1,560 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "FeatureCollection",
+      "properties": {
+        "name": "North America"
+      },
+      "features": [
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Las Vegas, NV, USA",
+            "description": "One night in Vegas, looking at the flashiness, overpriced dinner. (4 January, stay the night)"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -115.136389,
+              36.175
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Drive from Las Vegas",
+            "description": "Attempt to make a first stop at Dante's View. The road was blocked because of the government shutdown so we had to turn back. Drive through Twenty Mule Road and briefly stop for some first views."
+          },
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [-115.3130, 36.0219],
+              [-115.6574, 36.0066],
+              [-116.0002, 36.2218],
+              [-116.3067, 36.3469],
+              [-116.4159, 36.2988],
+              [-116.7099, 36.3630],
+              [-116.6638, 36.2684],
+              [-116.7099, 36.3630],
+              [-116.7943, 36.4084],
+              [-116.7935, 36.4027],
+              [-116.7780, 36.3915],
+              [-116.7703, 36.3981],
+              [-116.8095, 36.4209]
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Zabriskie Point Hike",
+            "description": "Copy from GPX file? See it at https://www.strava.com/activities/2058564534"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -116.81023, 36.42078
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Drive from Zabriskie Point to Badwater Basin",
+            "description": "Pass by Furnace Creek Visitor Center"
+          },
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [-116.80893, 36.42106],
+              [-116.8447, 36.4506],
+              [-116.8562, 36.4480],
+              [-116.86626, 36.46122],
+              [-116.8456, 36.4158],
+              [-116.8523, 36.3846],
+              [-116.7657, 36.2317],
+              [-116.7676, 36.2295]
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Badwater Basin. Walk at https://www.strava.com/activities/2058564752"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": 
+              [-116.7676, 36.2295]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Drive from Badwater Basin to Beatty",
+            "description": "Stop for pictures at Devil's Golf Course"
+          },
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [-116.7676, 36.2295],
+              [-116.8124, 36.2979],
+              [-116.8263, 36.2872],
+              [-116.8124, 36.2979],
+              [-116.8545, 36.4439],
+              [-116.8956, 36.5572],
+              [-116.9425, 36.5876],
+              [-116.9793, 36.7217],
+              [-116.7643, 36.9044]
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Devil's Golf Course"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": 
+            [-116.8260, 36.2860]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Beatty, NV, USA",
+            "description": "The base of operations, two nights spent here. Also got a run in: https://www.strava.com/activities/2058662333"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -116.754444,
+              36.909444
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Drive from Beatty to Ubehebe and Little Hebe craters (Sunday morning 6 January)"
+          },
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [-116.7643, 36.9044],
+              [-116.9793, 36.7217],
+              [-117.0415, 36.6454],
+              [-117.1302, 36.7272],
+              [-117.1477, 36.7822],
+              [-117.1889, 36.7858],
+              [-117.3665, 36.9980],
+              [-117.4125, 37.0189],
+              [-117.4481, 37.0177],
+              [-117.4569, 37.0104]
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Ubehebe and Little Hebe craters",
+            "description": "Magnificent sight. Climbing back out was a workout. The full walk: https://www.strava.com/activities/2061211997"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": 
+              [-117.4507, 37.0099]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Drive from Ubehebe and Little Hebe craters to the Mesquite dunes (Sunday noon 6 January)"
+          },
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [-117.4569, 37.0104],
+              [-117.4481, 37.0177],
+              [-117.4125, 37.0189],
+              [-117.3665, 36.9980],
+              [-117.1889, 36.7858],
+              [-117.1477, 36.7822],
+              [-117.1302, 36.7272],
+              [-117.0415, 36.6454],
+              [-117.0337, 36.6385],
+              [-117.0966, 36.6008],
+              [-117.1162, 36.6055]
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Mesquite Dunes",
+            "description": ""
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": 
+              [-117.1138, 36.6132]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Drive from Mesquite dunes to Furnace Creek for late lunch (Sunday afternoon 6 January)"
+          },
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [-117.1162, 36.6055],
+              [-117.0966, 36.6008],
+              [-117.0337, 36.6385],
+              [-116.8943, 36.5558],
+              [-116.8654, 36.4576]
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Furnace Creek",
+            "description": "Passed by the visitor centre the first day, some restaurant the second day."
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": 
+              [-116.8662, 36.4616]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Drive from Furnace Creek to Harmony Borax Works (Sunday afternoon 6 January)",
+            "description": "Tried to go to Artists Palette, but the loop was closed due to the government shutdown."
+          },
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [-116.8654, 36.4576],
+              [-116.8463, 36.4060],
+              [-116.8523, 36.3850],
+              [-116.8307, 36.3304],
+              [-116.8523, 36.3850],
+              [-116.8463, 36.4060],
+              [-116.8696, 36.4798],
+              [-116.87295, 36.48034]
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Harmony Borax Works"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": 
+            [-116.87350, 36.47987]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Drive from Harmony Borax Works to Salt Creek (Sunday afternoon 6 January)"
+          },
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [-116.87295, 36.48034],
+              [-116.8696, 36.4798],
+              [-116.8944, 36.5554],
+              [-116.9425, 36.5873],
+              [-116.9810, 36.6043]
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Run to and on the Salt Creek Boardwalk. https://www.strava.com/activities/2061212434"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": 
+            [-116.9909, 36.5906]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Drive back to Beatty to rest (Sunday evening 6 January)"
+          },
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [-116.9810, 36.6043],
+              [-117.0310, 36.6399],
+              [-117.0361, 36.6391],
+              [-117.0411, 36.6462],
+              [-116.7674, 36.9034]
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Drive to Ryolite (Monday morning 7 January)"
+          },
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [-116.7674, 36.9034],
+              [-116.7875, 36.9037],
+              [-116.8182, 36.8809],
+              [-116.8266, 36.8894],
+              [-116.8303, 36.8965]
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Rhyolite ghost town"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": 
+            [-116.8289, 36.9038]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Drive to Devil's Hole (Monday morning 7 January)",
+            "description": "Think this is the road we took. Looks like the most obvious way to go."
+          },
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [-116.8303, 36.8965],
+              [-116.8266, 36.8894],
+              [-116.8182, 36.8809],
+              [-116.7875, 36.9037],
+              [-116.7674, 36.9034],
+              [-116.7595, 36.9080],
+              [-116.7511, 36.8905],
+              [-116.7573, 36.8574],
+              [-116.7452, 36.8271],
+              [-116.6301, 36.7290],
+              [-116.5340, 36.6761],
+              [-116.4006, 36.6436],
+              [-116.4155, 36.5539],
+              [-116.4217, 36.4518],
+              [-116.4223, 36.4339],
+              [-116.4007, 36.4305],
+              [-116.3944, 36.4253],
+              [-116.3206, 36.4244],
+              [-116.3202, 36.4183],
+              [-116.3075, 36.4096],
+              [-116.2986, 36.4099],
+              [-116.2904, 36.4218]
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Devil's Hole",
+            "description": "A hole in to the ground. There is warm water down there (you can feel the waft of it). In it is a certain breed of fish that only lives in this hole and the few waterways connected to it."
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": 
+            [-116.29144, 36.42532]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Drive to another nature walk around the corner."
+          },
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [-116.2904, 36.4218],
+              [-116.2986, 36.4099],
+              [-116.30196, 36.40963],
+              [-116.3020, 36.4023],
+              [-116.27636, 36.40187]
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Point of Rocks Springs"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": 
+            [-116.27584, 36.40168]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Drive to Crystal Reservoir."
+          },
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [-116.27636, 36.40187],
+              [-116.3020, 36.4023],
+              [-116.30196, 36.40963],
+              [-116.3075, 36.4096],
+              [-116.3198, 36.4178],
+              [-116.3300, 36.4131]
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Crystal Reservoir"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": 
+            [-116.3264, 36.4099]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Drive to Las Vegas to drop Caroline off at the airport, then onwards to Primm, our next sleeping location. (Monday noonish 7 January)"
+          },
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [-116.3300, 36.4131],
+              [-116.3198, 36.4178],
+              [-116.3075, 36.4096],
+              [-116.30196, 36.40963],
+              [-116.3020, 36.4023],
+              [-116.3020, 36.3954],
+              [-116.3010, 36.3940],
+              [-116.2995, 36.3933],
+              [-116.2640, 36.3915],
+              [-116.1981, 36.3067],
+              [-116.1036, 36.2637],
+              [-116.0041, 36.2633],
+              [-115.6497, 36.0030],
+              [-115.1922, 36.0374],
+              [-115.1835, 35.9397],
+              [-115.3209, 35.7850],
+              [-115.3662, 35.7192],
+              [-115.3881, 35.6130]
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Primm, NV, USA"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -115.390278,
+              35.612778
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Mojave National Preserve, CA, USA"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -115.716667,
+              34.883333
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Amboy Crater, CA, USA"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -115.791109,
+              34.543883
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Palm Springs, CA, USA"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -116.545278,
+              33.830278
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Los Angeles, CA, USA"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -118.25,
+              34.05
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Escondido, CA, USA"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -117.080833,
+              33.124722
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "San Diego, CA, USA"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -117.1625,
+              32.715
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
+
