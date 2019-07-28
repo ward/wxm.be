@@ -550,7 +550,8 @@
         {
           "type": "Feature",
           "properties": {
-            "name": "Vézelay, France"
+            "name": "Vézelay, France",
+            "description": "School trip in first year of high school."
           },
           "geometry": {
             "type": "Point",
@@ -641,7 +642,7 @@
         {
           "type": "Feature",
           "properties": {
-            "name": "Laguilo, France"
+            "name": "Laguiole, France"
           },
           "geometry": {
             "type": "Point",
@@ -663,6 +664,116 @@
               42.416296606448746
             ]
           }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Vienna, Austria"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [16.3725, 48.2086]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Zürich, Switserland"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [8.5367, 47.3775]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Larnaca, Cyprus"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [33.6360, 34.9166]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Stockholm, Sweden"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [18.0711, 59.3255]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Lille, France"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [3.0468, 50.6311]
+          }
+        },
+        {
+          "type": "FeatureCollection",
+          "properties": {
+            "name": "Road trip with Tina to Bert's wedding."
+          },
+          "features": [
+            {
+              "type": "Feature",
+              "properties": {
+                "name": "Amiens, France"
+              },
+              "geometry": {
+                "type": "Point",
+                "coordinates": [2.2847, 49.8987]
+              }
+            },
+            {
+              "type": "Feature",
+              "properties": {
+                "name": "Orléans, France"
+              },
+              "geometry": {
+                "type": "Point",
+                "coordinates": [1.9085, 47.9015]
+              }
+            },
+            {
+              "type": "Feature",
+              "properties": {
+                "name": "Château de Chambord, France"
+              },
+              "geometry": {
+                "type": "Point",
+                "coordinates": [1.5171, 47.6161]
+              }
+            },
+            {
+              "type": "Feature",
+              "properties": {
+                "name": "Château de Cheverny, France",
+                "description": "The castle on which Kuifje's (Tintin's) castle is based."
+              },
+              "geometry": {
+                "type": "Point",
+                "coordinates": [1.4579, 47.5001]
+              }
+            },
+            {
+              "type": "Feature",
+              "properties": {
+                "name": "Évaux-Les-Bains, France",
+                "description": "More specifically, Montchabrol is where the wedding was. La Couture is where we stayed."
+              },
+              "geometry": {
+                "type": "Point",
+                "coordinates": [2.4862, 46.1750]
+              }
+            }
+          ]
         },
         {
           "type": "FeatureCollection",
