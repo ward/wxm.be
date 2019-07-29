@@ -478,20 +478,41 @@
         {
           "type": "Feature",
           "properties": {
-            "name": "Mojave National Preserve, CA, USA"
+            "name": "Hole-in-the-Wall, Mojave National Preserve, CA, USA",
+            "description": "Run with Tina on Monday evening 7 January"
           },
           "geometry": {
             "type": "Point",
-            "coordinates": [
-              -115.716667,
-              34.883333
-            ]
+            "coordinates": [-115.3960, 35.0426]
           }
         },
         {
           "type": "Feature",
           "properties": {
-            "name": "Amboy Crater, CA, USA"
+            "name": "Teutonia Peak, Mojave National Preserve, CA, USA",
+            "description": "Run with Tina on Tuesday morning 8 January"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-115.56492, 35.30150]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Kelso Dunes, Mojave National Preserve, CA, USA",
+            "description": "Walk up the dunes Tuesday morning 8 January"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-115.71824, 34.90339]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Amboy Crater, CA, USA",
+            "description": "Run up the crater Tuesday evening 8 January"
           },
           "geometry": {
             "type": "Point",
