@@ -15,130 +15,142 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
 ol, ul {
-	list-style: none;
+  list-style: none;
 }
 blockquote, q {
-	quotes: none;
+  quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+  content: '';
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 /* End CSS reset */
 
 
 /* Own styling */
 body {
-	font-family: "Charis SIL", serif;
-	background-color: #EEEEEE;
+  font-family: "Charis SIL", serif;
+  background-color: #EEEEEE;
+  display: grid;
+  grid-template-areas: "header" "content" "footer";
 }
 
 body header {
-	padding-top: 2em;
-	padding-bottom: 1.23em;
-	padding-left: 4em;
-	padding-right: 1em;
-	background-color: darkgreen;
-	color: #EEEEEE;
+  padding-top: 2em;
+  padding-bottom: 1.23em;
+  padding-left: 4em;
+  padding-right: 1em;
+  background-color: darkgreen;
+  color: #EEEEEE;
+  grid-area: header;
 }
 
 body header h1 {
-	font-variant: small-caps;
-	font-size: xx-large;
-	font-weight: bold;
+  font-variant: small-caps;
+  font-size: xx-large;
+  font-weight: bold;
 }
 
 body header h1 a {
-	color: #EEEEEE;
-	text-decoration: none;
+  color: #EEEEEE;
+  text-decoration: none;
 }
 
 body header li {
-	display: inline;
+  display: inline;
 }
 
 body header li a {
-	color: #DDDDDD;
-	transition: 500ms linear 0s;
+  color: #DDDDDD;
+  transition: 500ms linear 0s;
 }
 
 body header li a:hover {
-	color: #FFFFFF;
+  color: #FFFFFF;
 }
 
 body section {
-	height: auto;
-	margin-left: 1em;
+  height: auto;
+  margin-left: 1em;
+  grid-area: content;
 }
 
 body section h1 {
-	padding-top: 1em;
-	padding-bottom: 0.5em;
-	font-size: x-large;
-	font-weight: bold;
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+  font-size: x-large;
+  font-weight: bold;
 }
 
 body section h2 {
-	padding-top: 1em;
-	padding-bottom: 0.5em;
-	padding-left: 0.5em;
-	font-size: large;
-	font-weight: bold;
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  font-size: large;
+  font-weight: bold;
 }
 
 body section h3 {
-	padding-left: 2em;
-	font-weight: bold;
+  padding-left: 2em;
+  padding-right: 2em;
+  font-weight: bold;
 }
 
 body section p {
-	padding-left: 2em;
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-	width: 35em;
+  padding-left: 2em;
+  padding-right: 2em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  max-width: 35em;
+  text-align: justify;
 }
 
 body section ul {
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-	line-height: 1.1;
-	padding-left: 3em;
-	list-style-type: square;
-	list-style-position: inside;
-}
-body footer {
-	border-top: 1px solid green;
-	margin-top: 2em;
-	padding-top: 1em;
-	padding-left: 1em;
-	padding-bottom: 2em;
-	font-size: small;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.1;
+  padding-left: 3em;
+  padding-right: 2em;
+  list-style-type: "〰️ ";
+  max-width: 34em;
+  text-align: justify;
 }
 body section a {
-	color: darkviolet;
-	transition: 500ms linear 0s;
+  color: darkviolet;
+  transition: 500ms linear 0s;
 }
 body section a:hover {
-	color: green;
+  color: green;
+}
+body footer {
+  border-top: 1px solid green;
+  margin-top: 2em;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 2em;
+  font-size: small;
+  grid-area: footer;
 }
