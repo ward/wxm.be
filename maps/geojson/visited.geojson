@@ -253,6 +253,58 @@
               32.715
             ]
           }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Miami, FL, USA"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -80.1937,
+              25.7742
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Key Largo, FL, USA"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -80.4472,
+              25.0870
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Islamorada, FL, USA"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -80.6278,
+              24.9242
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Everglades National Park, FL, USA"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -80.7440,
+              25.3512
+            ]
+          }
         }
       ]
     },
@@ -713,6 +765,16 @@
           "geometry": {
             "type": "Point",
             "coordinates": [3.0468, 50.6311]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Budapest, Hungary"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [19.04047, 47.49837]
           }
         },
         {
