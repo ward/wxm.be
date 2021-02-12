@@ -896,6 +896,79 @@
               }
             }
           ]
+        },
+        {
+          "type": "FeatureCollection",
+          "properties": {
+            "name": "Malta with Tina (2020)"
+          },
+          "features": [
+            {
+              "type": "Feature",
+              "properties": {
+                "name": "Saint Paul's Bay, Malta"
+              },
+              "geometry": {
+                "type": "Point",
+                "coordinates": [
+                  14.414319992065428,
+                  35.94994022299046
+                ]
+              }
+            },
+            {
+              "type": "Feature",
+              "properties": {
+                "name": "Rabat and Mdina, Malta"
+              },
+              "geometry": {
+                "type": "Point",
+                "coordinates": [
+                  14.397754669189453,
+                  35.881957084728356
+                ]
+              }
+            },
+            {
+              "type": "Feature",
+              "properties": {
+                "name": "Valletta, Malta"
+              },
+              "geometry": {
+                "type": "Point",
+                "coordinates": [
+                  14.511566162109373,
+                  35.898367361651495
+                ]
+              }
+            },
+            {
+              "type": "Feature",
+              "properties": {
+                "name": "Blue Lagoon, Malta"
+              },
+              "geometry": {
+                "type": "Point",
+                "coordinates": [
+                  14.323854446411133,
+                  36.0124844664143
+                ]
+              }
+            },
+            {
+              "type": "Feature",
+              "properties": {
+                "name": "Victoria, Malta"
+              },
+              "geometry": {
+                "type": "Point",
+                "coordinates": [
+                  14.239096641540527,
+                  36.04375534519075
+                ]
+              }
+            }
+          ]
         }
       ]
     }
