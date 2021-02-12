@@ -1,6 +1,6 @@
 const DEFAULT_MAP = 'visited';
 
-function loadJSON(callback, geojson_location) {   
+function loadJSON(callback, geojson_location) {
   var xobj = new XMLHttpRequest();
   xobj.overrideMimeType("application/json");
   xobj.open('GET', geojson_location, true);
@@ -9,7 +9,7 @@ function loadJSON(callback, geojson_location) {
       callback(JSON.parse(xobj.responseText));
     }
   };
-  xobj.send(null);  
+  xobj.send(null);
 }
 function createPopup(feature, layer) {
   if (feature.properties && feature.properties.name) {
@@ -22,12 +22,8 @@ function createPopup(feature, layer) {
 }
 function handle_geojson(geojson) {
   var mymap = L.map('mapid').setView([39,-38], 3);
-  // L.tileLayer('https://a.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
-  // L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}{r}.{ext}', {
-  L.tileLayer('https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}{r}.png', {
+  L.tileLayer('https://a.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
-    subdomains: 'abcd',
-    ext: 'png',
     maxZoom: 18,
   }).addTo(mymap);
 
