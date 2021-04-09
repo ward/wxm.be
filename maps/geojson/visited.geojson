@@ -88,6 +88,19 @@
         {
           "type": "Feature",
           "properties": {
+            "name": "May's Landing, NJ, USA"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -74.7276610,
+              39.4523326
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
             "name": "Durham, NC, USA"
           },
           "geometry": {
