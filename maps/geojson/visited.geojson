@@ -318,6 +318,101 @@
               25.3512
             ]
           }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Hurricane, UT",
+            "description": "Staying the night"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -113.289888,
+              37.1750272
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Springdale, UT, USA",
+            "description": "Hub for Zion National Park visits"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -112.9985515,
+              37.1888714
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Zion National Park, UT, USA"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -112.9480,
+              37.2690
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Bryce Canyon City, UT",
+            "description": "Hub for Bryce Canyon National Park"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -112.1565,
+              37.6741095
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Bryce Canyon National Park"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -112.1631,
+              37.6284
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Torrey, UT, USA",
+            "description": "We stayed a km or two east of Torrey, but I did get a run done in here."
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -111.4213,
+              38.3013
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Capitol Reef National Park, UT, USA"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -111.2259,
+              38.261
+            ]
+          }
         }
       ]
     },
@@ -982,6 +1077,34 @@
               }
             }
           ]
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Karystos (Κάρυστος), Greece",
+            "description": "Nearby with K&K"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              24.4198624,
+              38.0155328
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Agistri (Αγκίστρι), Greece",
+            "description": "Week with Tina, Care. Saw most of the island, stayed/ate at Skala (Σκάλα)."
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              23.3489,
+              37.6961
+            ]
+          }
         }
       ]
     }
