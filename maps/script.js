@@ -28,6 +28,7 @@ function handle_geojson(geojson) {
   }).addTo(mymap);
 
   var geojsonLayer = L.geoJSON(geojson, { onEachFeature: createPopup }).addTo(mymap);
+  L.control.scale({ metric: true, imperial: false }).addTo(mymap);
   mymap.fitBounds(geojsonLayer.getBounds());
 }
 
