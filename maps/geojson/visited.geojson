@@ -886,6 +886,34 @@
           }
         },
         {
+          "type": "Feature",
+          "properties": {
+            "name": "Carqueiranne, France",
+            "description": "With Tina at Cat's, June 2021"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              6.0767,
+              43.0908
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Nancy, France",
+            "description": "With Tina and Cat overnight on the drive back, June 2021"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              6.1832,
+              48.6936
+            ]
+          }
+        },
+        {
           "type": "FeatureCollection",
           "properties": {
             "name": "Road trip with Tina to Bert's wedding."
@@ -1073,6 +1101,98 @@
                 "coordinates": [
                   14.239096641540527,
                   36.04375534519075
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "FeatureCollection",
+          "properties": {
+            "name": "Slovenia with Tina and Care (July 2021)"
+          },
+          "features": [
+            {
+              "type": "Feature",
+              "properties": {
+                "name": "Lake Jasna, Slovenia",
+                "description": "Running in the area and a very cold dip in the lake afterwards"
+              },
+              "geometry": {
+                "type": "Point",
+                "coordinates": [
+                  13.7835,
+                  46.4742
+                ]
+              }
+            },
+            {
+              "type": "Feature",
+              "properties": {
+                "name": "Three country point of Slovenia, Italy, and Austria",
+                "description": "Bit of a climb to get there from the Slovenian side (Ratece), pretty views at the top."
+              },
+              "geometry": {
+                "type": "Point",
+                "coordinates": [
+                  13.71406,
+                  46.52298
+                ]
+              }
+            },
+            {
+              "type": "Feature",
+              "properties": {
+                "name": "Stara Fuzina, Slovenia",
+                "description": "Climb Vogar, check the waterfall and gorge to the north, run around the lake, chill at the lake."
+              },
+              "geometry": {
+                "type": "Point",
+                "coordinates": [
+                  13.89406,
+                  46.28763
+                ]
+              }
+            },
+            {
+              "type": "Feature",
+              "properties": {
+                "name": "Ljubljana, Slovenia",
+                "description": "Day of walking and chilling around the center"
+              },
+              "geometry": {
+                "type": "Point",
+                "coordinates": [
+                  14.5087,
+                  46.0488
+                ]
+              }
+            },
+            {
+              "type": "Feature",
+              "properties": {
+                "name": "Bled, Slovenia",
+                "description": "Run around the lake, climb to the viewpoints west side of the lake, swim in the lake, look around, some food"
+              },
+              "geometry": {
+                "type": "Point",
+                "coordinates": [
+                  14.1087,
+                  46.3681
+                ]
+              }
+            },
+            {
+              "type": "Feature",
+              "properties": {
+                "name": "Koprivnik v Bohinju, Slovenia",
+                "description": "Accomodation and hub"
+              },
+              "geometry": {
+                "type": "Point",
+                "coordinates": [
+                  13.9833,
+                  46.3057
                 ]
               }
             }
