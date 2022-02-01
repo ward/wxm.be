@@ -5,7 +5,7 @@
       "type": "Feature",
       "properties": {
         "name": "Hotel Kong Arthur",
-        "description": "Ward and Tina here"
+        "description": "Ward and Tina here (expected)"
       },
       "geometry": {
         "type": "Point",
@@ -32,14 +32,14 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Event place somewhere here",
-        "description": "For party/chilling the rest of the Saturday"
+        "name": "Transformerstationen",
+        "description": "Event hall. For party/chilling the rest of the Saturday"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          12.52069,
-          55.6722
+          12.5152863,
+          55.6603615
         ]
       }
     },
