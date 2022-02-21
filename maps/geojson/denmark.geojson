@@ -4,8 +4,22 @@
     {
       "type": "Feature",
       "properties": {
+        "name": "NH Collection",
+        "description": "Ward and Tina here"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.5879213,
+          55.6737292
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "name": "Hotel Kong Arthur",
-        "description": "Ward and Tina here (expected)"
+        "description": "Family Ward"
       },
       "geometry": {
         "type": "Point",
