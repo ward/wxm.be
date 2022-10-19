@@ -1225,6 +1225,28 @@
               37.6961
             ]
           }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Kopenhagen, Denmark",
+            "description": "Marriage"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [12.5698, 55.6755]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Manchester, England, UK",
+            "description": ""
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-2.24450, 53.47925]
+          }
         }
       ]
     }
