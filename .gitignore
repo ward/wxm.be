@@ -1,7 +1,7 @@
 *.swp
 
 # albhed repository from FFX translator
-./albhed/
+/albhed/
 
 # sports-calendar repository managed elsewhere
-./sports-calendar/
+/sports-calendar/
