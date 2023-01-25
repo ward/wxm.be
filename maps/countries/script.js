@@ -21,6 +21,7 @@ const VISITED_COUNTRIES = [
   "austria",
   "ireland",
   "argentina",
+  "hungary",
   "czech", // No GPS tracks alas
 ];
 // Country data from https://github.com/georgique/world-geojson. Only
@@ -63,6 +64,8 @@ document.addEventListener("DOMContentLoaded", function () {
   create_map();
 
   for (let country of VISITED_COUNTRIES) {
+    // TODO: Make this a list or table under the map?
+    console.log(country);
     loadJSON(
       (geojson) => handle_country(country, geojson),
       `geojson/${country}.geojson`
