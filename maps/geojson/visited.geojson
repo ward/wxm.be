@@ -1271,6 +1271,17 @@
             "type": "Point",
             "coordinates": [24.74566, 59.43753]
           }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Aachen, Germany",
+            "description": ""
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [6.0838620, 50.7763510]
+          }
         }
       ]
     }
