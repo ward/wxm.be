@@ -416,6 +416,7 @@
         }
       ]
     },
+
     {
       "type": "FeatureCollection",
       "properties": {
@@ -437,6 +438,7 @@
         }
       ]
     },
+
     {
       "type": "FeatureCollection",
       "properties": {
@@ -1246,6 +1248,28 @@
           "geometry": {
             "type": "Point",
             "coordinates": [-2.24450, 53.47925]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Helsinki, Finland",
+            "description": ""
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [24.94274, 60.16749]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Tallinn, Estonia",
+            "description": ""
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [24.74566, 59.43753]
           }
         }
       ]
