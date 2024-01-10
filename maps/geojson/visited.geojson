@@ -435,6 +435,20 @@
               -34.60382391547706
             ]
           }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Bogotá, Colombia",
+	    "description": "SCAM-ICSME 2023"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -74.072222,
+              4.71111
+            ]
+          }
         }
       ]
     },
