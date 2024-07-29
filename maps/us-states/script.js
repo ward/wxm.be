@@ -6,6 +6,7 @@ const VISITED_STATES = [
   "Delaware",
   "District of Columbia",
   "Florida",
+  "Illinois",
   "Maryland",
   "Nevada",
   "New Jersey",
@@ -14,6 +15,7 @@ const VISITED_STATES = [
   "Pennsylvania",
   "Utah",
   "Virginia",
+  "Wisconsin",
 ];
 
 function loadJSON(callback, geojson_location) {
