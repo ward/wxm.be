@@ -413,6 +413,97 @@
               38.261
             ]
           }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Chicago, IL"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -87.62443,
+              41.87556
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Kenosha, WI"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -87.82123,
+              42.58468
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Milwaukee, WI"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -87.90908,
+              43.03865
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Oshkosh, WI"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -88.54086,
+              44.02070
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Appleton, WI"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -88.40698,
+              44.26140
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Belgium, WI"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -87.84297,
+              43.50037
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Port Washington, WI"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -87.86929,
+              43.38856
+            ]
+          }
         }
       ]
     },
@@ -426,7 +517,8 @@
         {
           "type": "Feature",
           "properties": {
-            "name": "Buenos Aires, Argentina"
+            "name": "Buenos Aires, Argentina",
+	    "description": "ICSE 2017"
           },
           "geometry": {
             "type": "Point",
