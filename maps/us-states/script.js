@@ -17,6 +17,24 @@ const VISITED_STATES = [
   "Virginia",
   "Wisconsin",
 ];
+// I have had a beer from these states. Fill from Untappd.
+const BEER_STATES = [
+  "Alaska",
+  "Illinois",
+  "Pennsylvania",
+  "Virginia",
+  "Wisconsin",
+];
+
+function is_beer() {
+  let beerparam = new URL(document.location).searchParams.get("beer");
+  return (
+    beerparam !== null &&
+    beerparam !== undefined &&
+    beerparam !== "false" &&
+    beerparam !== "no"
+  );
+}
 
 function loadJSON(callback, geojson_location) {
   var xobj = new XMLHttpRequest();
@@ -29,11 +47,11 @@ function loadJSON(callback, geojson_location) {
   };
   xobj.send(null);
 }
-function handle_states(geojson) {
+function handle_states(geojson, list_of_states) {
   var geojsonLayer = L.geoJSON(geojson, {
     // pointToLayer: create_point,
     style: (feature) => {
-      if (VISITED_STATES.includes(feature.properties.NAME)) {
+      if (list_of_states.includes(feature.properties.NAME)) {
         return {
           fillColor: "#00ff00",
           color: "#00ff44",
@@ -67,8 +85,11 @@ function create_map() {
 document.addEventListener("DOMContentLoaded", function () {
   create_map();
 
-  loadJSON(
-    (geojson) => handle_states(geojson),
-    `geojson/gz_2010_us_040_00_5m.geojson`,
-  );
+  loadJSON((geojson) => {
+    if (is_beer()) {
+      handle_states(geojson, BEER_STATES);
+    } else {
+      handle_states(geojson, VISITED_STATES);
+    }
+  }, `geojson/gz_2010_us_040_00_5m.geojson`);
 });
