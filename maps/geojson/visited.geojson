@@ -1165,6 +1165,17 @@
             {
               "type": "Feature",
               "properties": {
+                "name": "Werfen",
+                "description": "Daytrip from Salzburg for Sound of Music trail and Eisriesenwelt ice cave"
+              },
+              "geometry": {
+                "coordinates": [13.190492878232504, 47.47668149892439],
+                "type": "Point"
+              }
+            },
+            {
+              "type": "Feature",
+              "properties": {
                 "name": "Vienna",
                 "description": "Some nights with a cancelled Taylor Swift concert"
               },
