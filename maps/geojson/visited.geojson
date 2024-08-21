@@ -1220,6 +1220,28 @@
             {
               "type": "Feature",
               "properties": {
+                "name": "Senj",
+                "description": "Lunch and minimal meander"
+              },
+              "geometry": {
+                "coordinates": [14.900642438603313, 44.990092077380524],
+                "type": "Point"
+              }
+            },
+            {
+              "type": "Feature",
+              "properties": {
+                "name": "Povile",
+                "description": "(stony) Beach days"
+              },
+              "geometry": {
+                "coordinates": [14.824189116268116, 45.1164940601777],
+                "type": "Point"
+              }
+            },
+            {
+              "type": "Feature",
+              "properties": {
                 "name": "Pula",
                 "description": "Lunch meander"
               },
