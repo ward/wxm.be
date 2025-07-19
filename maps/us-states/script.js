@@ -7,12 +7,14 @@ const VISITED_STATES = [
   "District of Columbia",
   "Florida",
   "Illinois",
+  "Kansas",
   "Maryland",
   "Nevada",
   "New Jersey",
   "New York",
   "North Carolina",
   "Pennsylvania",
+  "Puerto Rico",
   "Utah",
   "Virginia",
   "Wisconsin",
@@ -100,7 +102,7 @@ function create_popup(feature, layer, country_name) {
   }
 }
 function create_map() {
-  mymap = L.map("mapid").setView([39, -38], 3);
+  mymap = L.map("mapid").setView([39.83, -98.58], 4);
   L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
   }).addTo(mymap);

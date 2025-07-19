@@ -390,6 +390,92 @@
             "type": "Point",
             "coordinates": [-87.86929, 43.38856]
           }
+        },
+        {
+          "type": "FeatureCollection",
+          "properties": {
+            "name": "Wichita Trip 2025 (Tina's work)"
+          },
+          "features": [
+            {
+              "type": "Feature",
+              "properties": {
+                "name": "Wichita, KS"
+              },
+              "geometry": {
+                "type": "Point",
+                "coordinates": [-97.34, 37.69]
+              }
+            },
+            {
+              "type": "Feature",
+              "properties": {
+                "name": "Hutchinson, KS"
+              },
+              "geometry": {
+                "type": "Point",
+                "coordinates": [-97.93, 38.06]
+              }
+            }
+          ]
+        },
+        {
+          "type": "FeatureCollection",
+          "properties": {
+            "name": "California 2025"
+          },
+          "features": [
+            {
+              "type": "Feature",
+              "properties": {
+                "name": "Ventura, CA"
+              },
+              "geometry": {
+                "type": "Point",
+                "coordinates": [-119.29, 34.27]
+              }
+            },
+            {
+              "type": "Feature",
+              "properties": {
+                "name": "Lindsay, CA"
+              },
+              "geometry": {
+                "type": "Point",
+                "coordinates": [-119.09, 36.20]
+              }
+            },
+            {
+              "type": "Feature",
+              "properties": {
+                "name": "Mariposa, CA"
+              },
+              "geometry": {
+                "type": "Point",
+                "coordinates": [-119.97, 37.49]
+              }
+            },
+            {
+              "type": "Feature",
+              "properties": {
+                "name": "Sequoia National Park, CA"
+              },
+              "geometry": {
+                "type": "Point",
+                "coordinates": [-118.75, 36.58]
+              }
+            },
+            {
+              "type": "Feature",
+              "properties": {
+                "name": "Yosemite National Park, CA"
+              },
+              "geometry": {
+                "type": "Point",
+                "coordinates": [-119.59, 37.74]
+              }
+            }
+          ]
         }
       ]
     },
