@@ -48,10 +48,8 @@ function handle_geojson(geojson) {
 // Overrides global mymap variable
 function create_map() {
   mymap = L.map("mapid").setView([39, -38], 3);
-  L.tileLayer("https://a.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png", {
-    attribution:
-      'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
-    // maxZoom: 18,
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
   }).addTo(mymap);
 }
 
