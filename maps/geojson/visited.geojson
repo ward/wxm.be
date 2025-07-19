@@ -10,7 +10,7 @@
         {
           "type": "Feature",
           "properties": {
-            "name": "Philadelphia, PA, USA"
+            "name": "Philadelphia, PA"
           },
           "geometry": {
             "type": "Point",
@@ -20,7 +20,7 @@
         {
           "type": "Feature",
           "properties": {
-            "name": "Malvern, PA, USA"
+            "name": "Malvern, PA"
           },
           "geometry": {
             "type": "Point",
@@ -30,7 +30,7 @@
         {
           "type": "Feature",
           "properties": {
-            "name": "New York City, NY, USA"
+            "name": "New York City, NY"
           },
           "geometry": {
             "type": "Point",
@@ -40,7 +40,7 @@
         {
           "type": "Feature",
           "properties": {
-            "name": "Washington, DC, USA"
+            "name": "Washington, DC"
           },
           "geometry": {
             "type": "Point",
@@ -50,7 +50,7 @@
         {
           "type": "Feature",
           "properties": {
-            "name": "Atlantic City, NJ, USA"
+            "name": "Atlantic City, NJ"
           },
           "geometry": {
             "type": "Point",
@@ -60,7 +60,7 @@
         {
           "type": "Feature",
           "properties": {
-            "name": "Egg Harbor City, NJ, USA"
+            "name": "Egg Harbor City, NJ"
           },
           "geometry": {
             "type": "Point",
@@ -70,7 +70,7 @@
         {
           "type": "Feature",
           "properties": {
-            "name": "May's Landing, NJ, USA"
+            "name": "May's Landing, NJ"
           },
           "geometry": {
             "type": "Point",
@@ -80,7 +80,7 @@
         {
           "type": "Feature",
           "properties": {
-            "name": "Durham, NC, USA"
+            "name": "Durham, NC"
           },
           "geometry": {
             "type": "Point",
@@ -90,7 +90,7 @@
         {
           "type": "Feature",
           "properties": {
-            "name": "Harrisburg, PA, USA"
+            "name": "Harrisburg, PA"
           },
           "geometry": {
             "type": "Point",
@@ -100,7 +100,27 @@
         {
           "type": "Feature",
           "properties": {
-            "name": "Las Vegas, NV, USA"
+            "name": "Gettysburg, PA"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-77.232222, 39.828333]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Harrisonburg, VA"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-78.868889, 38.449444]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Las Vegas, NV"
           },
           "geometry": {
             "type": "Point",
@@ -110,7 +130,7 @@
         {
           "type": "Feature",
           "properties": {
-            "name": "Death Valley, CA, USA"
+            "name": "Death Valley, CA"
           },
           "geometry": {
             "type": "Point",
@@ -120,7 +140,7 @@
         {
           "type": "Feature",
           "properties": {
-            "name": "Beatty, NV, USA"
+            "name": "Beatty, NV"
           },
           "geometry": {
             "type": "Point",
@@ -130,7 +150,7 @@
         {
           "type": "Feature",
           "properties": {
-            "name": "Ash Meadows National Wildlife Refuge, NV, USA"
+            "name": "Ash Meadows National Wildlife Refuge, NV"
           },
           "geometry": {
             "type": "Point",
@@ -140,7 +160,7 @@
         {
           "type": "Feature",
           "properties": {
-            "name": "Primm, NV, USA"
+            "name": "Primm, NV"
           },
           "geometry": {
             "type": "Point",
@@ -150,7 +170,7 @@
         {
           "type": "Feature",
           "properties": {
-            "name": "Mojave National Preserve, CA, USA"
+            "name": "Mojave National Preserve, CA"
           },
           "geometry": {
             "type": "Point",
@@ -160,7 +180,7 @@
         {
           "type": "Feature",
           "properties": {
-            "name": "Amboy Crater, CA, USA"
+            "name": "Amboy Crater, CA"
           },
           "geometry": {
             "type": "Point",
@@ -170,7 +190,7 @@
         {
           "type": "Feature",
           "properties": {
-            "name": "Palm Springs, CA, USA"
+            "name": "Palm Springs, CA"
           },
           "geometry": {
             "type": "Point",
@@ -180,7 +200,7 @@
         {
           "type": "Feature",
           "properties": {
-            "name": "Los Angeles, CA, USA"
+            "name": "Los Angeles, CA"
           },
           "geometry": {
             "type": "Point",
@@ -190,7 +210,7 @@
         {
           "type": "Feature",
           "properties": {
-            "name": "Escondido, CA, USA"
+            "name": "Escondido, CA"
           },
           "geometry": {
             "type": "Point",
@@ -200,7 +220,7 @@
         {
           "type": "Feature",
           "properties": {
-            "name": "San Diego, CA, USA"
+            "name": "San Diego, CA"
           },
           "geometry": {
             "type": "Point",
@@ -210,7 +230,7 @@
         {
           "type": "Feature",
           "properties": {
-            "name": "Miami, FL, USA"
+            "name": "Miami, FL"
           },
           "geometry": {
             "type": "Point",
@@ -220,7 +240,7 @@
         {
           "type": "Feature",
           "properties": {
-            "name": "Key Largo, FL, USA"
+            "name": "Key Largo, FL"
           },
           "geometry": {
             "type": "Point",
@@ -230,7 +250,7 @@
         {
           "type": "Feature",
           "properties": {
-            "name": "Islamorada, FL, USA"
+            "name": "Islamorada, FL"
           },
           "geometry": {
             "type": "Point",
@@ -240,7 +260,7 @@
         {
           "type": "Feature",
           "properties": {
-            "name": "Everglades National Park, FL, USA"
+            "name": "Everglades National Park, FL"
           },
           "geometry": {
             "type": "Point",
@@ -261,7 +281,7 @@
         {
           "type": "Feature",
           "properties": {
-            "name": "Springdale, UT, USA",
+            "name": "Springdale, UT",
             "description": "Hub for Zion National Park visits"
           },
           "geometry": {
@@ -272,7 +292,7 @@
         {
           "type": "Feature",
           "properties": {
-            "name": "Zion National Park, UT, USA"
+            "name": "Zion National Park, UT"
           },
           "geometry": {
             "type": "Point",
@@ -303,7 +323,7 @@
         {
           "type": "Feature",
           "properties": {
-            "name": "Torrey, UT, USA",
+            "name": "Torrey, UT",
             "description": "We stayed a km or two east of Torrey, but I did get a run done in here."
           },
           "geometry": {
@@ -314,7 +334,7 @@
         {
           "type": "Feature",
           "properties": {
-            "name": "Capitol Reef National Park, UT, USA"
+            "name": "Capitol Reef National Park, UT"
           },
           "geometry": {
             "type": "Point",
@@ -442,7 +462,7 @@
               },
               "geometry": {
                 "type": "Point",
-                "coordinates": [-119.09, 36.20]
+                "coordinates": [-119.09, 36.2]
               }
             },
             {
@@ -473,6 +493,44 @@
               "geometry": {
                 "type": "Point",
                 "coordinates": [-119.59, 37.74]
+              }
+            }
+          ]
+        },
+        {
+          "type": "FeatureCollection",
+          "properties": {
+            "name": "Puerto Rico 2025"
+          },
+          "features": [
+            {
+              "type": "Feature",
+              "properties": {
+                "name": "San Juan, Puerto Rico"
+              },
+              "geometry": {
+                "type": "Point",
+                "coordinates": [-66.1057, 18.4663]
+              }
+            },
+            {
+              "type": "Feature",
+              "properties": {
+                "name": "Luquillo, Puerto Rico"
+              },
+              "geometry": {
+                "type": "Point",
+                "coordinates": [-65.7167, 18.3725]
+              }
+            },
+            {
+              "type": "Feature",
+              "properties": {
+                "name": "El Yunque National Forest, Puerto Rico"
+              },
+              "geometry": {
+                "type": "Point",
+                "coordinates": [-65.783, 18.317]
               }
             }
           ]
