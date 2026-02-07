@@ -28,6 +28,8 @@ const VISITED_COUNTRIES = [
   "colombia",
   "slovakia",
   "croatia",
+  "portugal",
+  "vatican",
 ];
 // Country data from https://github.com/georgique/world-geojson. Only
 // downloaded those countries I have been in at the time of writing.

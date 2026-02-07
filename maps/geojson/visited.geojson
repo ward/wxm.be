@@ -1450,6 +1450,89 @@
               }
             }
           ]
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Bochum, Germany",
+            "description": "Visiting Gauthier summer 2025"
+          },
+          "geometry": {
+            "coordinates": [7.218704, 51.480628],
+            "type": "Point"
+          }
+        },
+        {
+          "type": "FeatureCollection",
+          "name": "Italy trip Fall 2025",
+          "features": [
+            {
+              "type": "Feature",
+              "properties": {
+                "name": "Lisboa, Portugal",
+                "description": "Unintended long layover to sightsee the city"
+              },
+              "geometry": {
+                "coordinates": [-9.136462, 38.70749],
+                "type": "Point"
+              }
+            },
+            {
+              "type": "Feature",
+              "properties": {
+                "name": "Firenze, Italy",
+                "description": ""
+              },
+              "geometry": {
+                "coordinates": [11.25633, 43.7731],
+                "type": "Point"
+              }
+            },
+            {
+              "type": "Feature",
+              "properties": {
+                "name": "Fiesole, Italy",
+                "description": "Mini day trip from Firenze"
+              },
+              "geometry": {
+                "coordinates": [11.293082, 43.806663],
+                "type": "Point"
+              }
+            },
+            {
+              "type": "Feature",
+              "properties": {
+                "name": "Roma, Italy",
+                "description": ""
+              },
+              "geometry": {
+                "coordinates": [12.485144, 41.892444],
+                "type": "Point"
+              }
+            },
+            {
+              "type": "Feature",
+              "properties": {
+                "name": "Vatican City, Vatican City",
+                "description": ""
+              },
+              "geometry": {
+                "coordinates": [12.45356, 41.90217],
+                "type": "Point"
+              }
+            },
+            {
+              "type": "Feature",
+              "properties": {
+                "name": "Pompeii, Italy",
+                "description": "Day trip from Rome"
+              },
+              "geometry": {
+                "coordinates": [14.484798, 40.749431],
+                "type": "Point"
+              }
+            }
+          ]
         }
       ]
     }
