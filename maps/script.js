@@ -2,6 +2,7 @@ const DEFAULT_MAP = "visited";
 
 const AVAILABLE_MAPS = [
   { id: "visited", label: "Visited" },
+  { id: "countries", label: "Countries" },
   { id: "westcoast2019", label: "West Coast 2019" },
 ];
 
@@ -191,10 +192,7 @@ function addSourceAndLayers(map, flat) {
         var feature = e.features[0];
         var html = popupHTML(feature);
         if (html) {
-          new maplibregl.Popup()
-            .setLngLat(e.lngLat)
-            .setHTML(html)
-            .addTo(map);
+          new maplibregl.Popup().setLngLat(e.lngLat).setHTML(html).addTo(map);
         }
       });
       map.on("mouseenter", layerId, function () {
@@ -205,7 +203,6 @@ function addSourceAndLayers(map, flat) {
       });
     },
   );
-
 }
 
 function popupHTML(feature) {
