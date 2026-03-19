@@ -1,5 +1,52 @@
 const DEFAULT_MAP = "visited";
 
+const AVAILABLE_MAPS = [
+  { id: "visited", label: "Visited" },
+  { id: "westcoast2019", label: "West Coast 2019" },
+];
+
+class MapSelectorControl {
+  constructor(currentMapId, onSelect) {
+    this._currentMapId = currentMapId;
+    this._onSelect = onSelect;
+  }
+
+  onAdd() {
+    this._container = document.createElement("div");
+    this._container.className = "maplibregl-ctrl";
+
+    var select = document.createElement("select");
+    select.style.padding = "4px 8px";
+    select.style.fontSize = "14px";
+
+    AVAILABLE_MAPS.forEach(
+      function (m) {
+        var option = document.createElement("option");
+        option.value = m.id;
+        option.textContent = m.label;
+        if (m.id === this._currentMapId) {
+          option.selected = true;
+        }
+        select.appendChild(option);
+      }.bind(this),
+    );
+
+    select.addEventListener(
+      "change",
+      function (e) {
+        this._onSelect(e.target.value);
+      }.bind(this),
+    );
+
+    this._container.appendChild(select);
+    return this._container;
+  }
+
+  onRemove() {
+    this._container.parentNode.removeChild(this._container);
+  }
+}
+
 // () -> String
 function get_map_name() {
   var params = new URLSearchParams(window.location.search);
@@ -191,6 +238,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   map.addControl(new maplibregl.ScaleControl({ unit: "metric" }));
+
+  var currentMapId = get_map_name();
+  map.addControl(
+    new MapSelectorControl(currentMapId, function (mapId) {
+      window.location.search = "?i=" + mapId;
+    }),
+    "top-left",
+  );
 
   map.on("load", function () {
     fetch(get_map_name())
