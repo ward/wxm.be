@@ -48,6 +48,44 @@ class MapSelectorControl {
   }
 }
 
+class ProjectionToggleControl {
+  constructor(map) {
+    this._map = map;
+  }
+
+  onAdd() {
+    this._container = document.createElement("div");
+    this._container.className = "maplibregl-ctrl";
+
+    var button = document.createElement("button");
+    button.style.padding = "4px 8px";
+    button.style.fontSize = "14px";
+    button.style.cursor = "pointer";
+    // TODO: make this an icon (black and white, maybe pinhead?)
+    button.textContent = "Globe";
+    button.title = "Toggle projection";
+
+    // TODO: Should probably read state of the map instead?
+    this._globe = false;
+
+    button.addEventListener(
+      "click",
+      function () {
+        this._globe = !this._globe;
+        this._map.setProjection({ type: this._globe ? "globe" : "mercator" });
+        button.textContent = this._globe ? "Mercator" : "Globe";
+      }.bind(this),
+    );
+
+    this._container.appendChild(button);
+    return this._container;
+  }
+
+  onRemove() {
+    this._container.parentNode.removeChild(this._container);
+  }
+}
+
 // () -> String
 function get_map_name() {
   var params = new URLSearchParams(window.location.search);
@@ -225,6 +263,11 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   map.addControl(new maplibregl.ScaleControl({ unit: "metric" }));
+  map.addControl(
+    new maplibregl.NavigationControl({ showZoom: false, visualizePitch: true }),
+  );
+
+  map.addControl(new ProjectionToggleControl(map));
 
   var currentMapId = get_map_name();
   map.addControl(
