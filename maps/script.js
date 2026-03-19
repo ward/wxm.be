@@ -50,8 +50,24 @@ class MapSelectorControl {
 // () -> String
 function get_map_name() {
   var params = new URLSearchParams(window.location.search);
-  var map_name = params.get("i") || DEFAULT_MAP;
-  return `geojson/${map_name}.geojson`;
+  return params.get("i") || DEFAULT_MAP;
+}
+
+function loadAndShowGeoJSON(map, mapId) {
+  fetch(`geojson/${mapId}.geojson`)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (geojson) {
+      var flat = flattenFeatureCollection(geojson);
+      var source = map.getSource("geojson-data");
+      if (source) {
+        source.setData(flat);
+      } else {
+        addSourceAndLayers(map, flat);
+      }
+      fitBounds(map, flat);
+    });
 }
 
 // Flatten nested FeatureCollections into a single flat FeatureCollection.
@@ -70,9 +86,39 @@ function flattenFeatureCollection(geojson) {
   return { type: "FeatureCollection", features: features };
 }
 
-function handle_geojson(map, geojson) {
-  var flat = flattenFeatureCollection(geojson);
+function fitBounds(map, flat) {
+  var bounds = new maplibregl.LngLatBounds();
+  flat.features.forEach(function (feature) {
+    var geom = feature.geometry;
+    if (!geom) return;
+    if (geom.type === "Point") {
+      bounds.extend(geom.coordinates);
+    } else if (geom.type === "LineString" || geom.type === "MultiPoint") {
+      geom.coordinates.forEach(function (c) {
+        bounds.extend(c);
+      });
+    } else if (geom.type === "Polygon" || geom.type === "MultiLineString") {
+      geom.coordinates.forEach(function (ring) {
+        ring.forEach(function (c) {
+          bounds.extend(c);
+        });
+      });
+    } else if (geom.type === "MultiPolygon") {
+      geom.coordinates.forEach(function (polygon) {
+        polygon.forEach(function (ring) {
+          ring.forEach(function (c) {
+            bounds.extend(c);
+          });
+        });
+      });
+    }
+  });
+  if (!bounds.isEmpty()) {
+    map.fitBounds(bounds, { padding: 40 });
+  }
+}
 
+function addSourceAndLayers(map, flat) {
   map.addSource("geojson-data", {
     type: "geojson",
     data: flat,
@@ -186,36 +232,6 @@ function handle_geojson(map, geojson) {
     },
   );
 
-  // Fit map to the data bounds
-  var bounds = new maplibregl.LngLatBounds();
-  flat.features.forEach(function (feature) {
-    var geom = feature.geometry;
-    if (!geom) return;
-    if (geom.type === "Point") {
-      bounds.extend(geom.coordinates);
-    } else if (geom.type === "LineString" || geom.type === "MultiPoint") {
-      geom.coordinates.forEach(function (c) {
-        bounds.extend(c);
-      });
-    } else if (geom.type === "Polygon" || geom.type === "MultiLineString") {
-      geom.coordinates.forEach(function (ring) {
-        ring.forEach(function (c) {
-          bounds.extend(c);
-        });
-      });
-    } else if (geom.type === "MultiPolygon") {
-      geom.coordinates.forEach(function (polygon) {
-        polygon.forEach(function (ring) {
-          ring.forEach(function (c) {
-            bounds.extend(c);
-          });
-        });
-      });
-    }
-  });
-  if (!bounds.isEmpty()) {
-    map.fitBounds(bounds, { padding: 40 });
-  }
 }
 
 function popupHTML(feature) {
@@ -242,18 +258,12 @@ document.addEventListener("DOMContentLoaded", function () {
   var currentMapId = get_map_name();
   map.addControl(
     new MapSelectorControl(currentMapId, function (mapId) {
-      window.location.search = "?i=" + mapId;
+      loadAndShowGeoJSON(map, mapId);
     }),
     "top-left",
   );
 
   map.on("load", function () {
-    fetch(get_map_name())
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (geojson) {
-        handle_geojson(map, geojson);
-      });
+    loadAndShowGeoJSON(map, currentMapId);
   });
 });
