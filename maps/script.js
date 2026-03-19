@@ -1,57 +1,4 @@
 const DEFAULT_MAP = "visited";
-var mymap;
-
-function loadJSON(callback, geojson_location) {
-  var xobj = new XMLHttpRequest();
-  xobj.overrideMimeType("application/json");
-  xobj.open("GET", geojson_location, true);
-  xobj.onreadystatechange = function () {
-    if (xobj.readyState == 4 && xobj.status == "200") {
-      callback(JSON.parse(xobj.responseText));
-    }
-  };
-  xobj.send(null);
-}
-function createPopup(feature, layer) {
-  if (feature.properties && feature.properties.name) {
-    var popupContent = "<strong>" + feature.properties.name + "</strong>";
-    if (feature.properties.description) {
-      popupContent += "<br />" + feature.properties.description;
-    }
-    layer.bindPopup(popupContent);
-  }
-}
-// Enable placing custom points. By default just use the L.marker, which is
-// what Leaflet would do normally.
-function create_point(geo_json_point, latlng) {
-  if (geo_json_point.properties && geo_json_point.properties.unicode_icon) {
-    let unicode_icon = L.divIcon({
-      html: geo_json_point.properties.unicode_icon,
-      iconSize: [30, 30],
-      className: "unicode_icon",
-    });
-    return L.marker(latlng, { icon: unicode_icon });
-  } else {
-    return L.marker(latlng);
-  }
-}
-// Uses global mymap variable
-function handle_geojson(geojson) {
-  // The style option is for lines and polygons, not for points. Instead, use pointToLayer.
-  var geojsonLayer = L.geoJSON(geojson, {
-    pointToLayer: create_point,
-    onEachFeature: createPopup,
-  }).addTo(mymap);
-  L.control.scale({ metric: true, imperial: false }).addTo(mymap);
-  mymap.fitBounds(geojsonLayer.getBounds());
-}
-// Overrides global mymap variable
-function create_map() {
-  mymap = L.map("mapid").setView([39, -38], 3);
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
-  }).addTo(mymap);
-}
 
 // () -> String
 function get_map_name() {
@@ -60,7 +7,198 @@ function get_map_name() {
   return `geojson/${map_name}.geojson`;
 }
 
+// Flatten nested FeatureCollections into a single flat FeatureCollection.
+// The GeoJSON files use FeatureCollections inside FeatureCollections (e.g.,
+// grouped by continent), which MapLibre does not support directly.
+function flattenFeatureCollection(geojson) {
+  var features = [];
+  function collect(obj) {
+    if (obj.type === "FeatureCollection") {
+      (obj.features || []).forEach(collect);
+    } else if (obj.type === "Feature") {
+      features.push(obj);
+    }
+  }
+  collect(geojson);
+  return { type: "FeatureCollection", features: features };
+}
+
+function handle_geojson(map, geojson) {
+  var flat = flattenFeatureCollection(geojson);
+
+  map.addSource("geojson-data", {
+    type: "geojson",
+    data: flat,
+  });
+
+  // Layer for lines (LineString, MultiLineString)
+  map.addLayer({
+    id: "geojson-lines",
+    type: "line",
+    source: "geojson-data",
+    filter: [
+      "any",
+      ["==", ["geometry-type"], "LineString"],
+      ["==", ["geometry-type"], "MultiLineString"],
+    ],
+    paint: {
+      "line-color": "#3388ff",
+      "line-width": 3,
+    },
+  });
+
+  // Layer for polygons (Polygon, MultiPolygon)
+  map.addLayer({
+    id: "geojson-polygons-fill",
+    type: "fill",
+    source: "geojson-data",
+    filter: [
+      "any",
+      ["==", ["geometry-type"], "Polygon"],
+      ["==", ["geometry-type"], "MultiPolygon"],
+    ],
+    paint: {
+      "fill-color": "#3388ff",
+      "fill-opacity": 0.2,
+    },
+  });
+  map.addLayer({
+    id: "geojson-polygons-outline",
+    type: "line",
+    source: "geojson-data",
+    filter: [
+      "any",
+      ["==", ["geometry-type"], "Polygon"],
+      ["==", ["geometry-type"], "MultiPolygon"],
+    ],
+    paint: {
+      "line-color": "#3388ff",
+      "line-width": 2,
+    },
+  });
+
+  // Layer for points
+  map.addLayer({
+    id: "geojson-points",
+    type: "circle",
+    source: "geojson-data",
+    filter: ["==", ["geometry-type"], "Point"],
+    paint: {
+      "circle-radius": 6,
+      "circle-color": "#3388ff",
+      "circle-stroke-width": 1,
+      "circle-stroke-color": "#ffffff",
+    },
+  });
+
+  // Popups on click for points
+  map.on("click", "geojson-points", function (e) {
+    var feature = e.features[0];
+    var html = popupHTML(feature);
+    if (html) {
+      new maplibregl.Popup()
+        .setLngLat(e.lngLat)
+        .setHTML(html)
+        .addTo(map);
+    }
+  });
+
+  // Popups on click for lines
+  map.on("click", "geojson-lines", function (e) {
+    var feature = e.features[0];
+    var html = popupHTML(feature);
+    if (html) {
+      new maplibregl.Popup()
+        .setLngLat(e.lngLat)
+        .setHTML(html)
+        .addTo(map);
+    }
+  });
+
+  // Popups on click for polygons
+  map.on("click", "geojson-polygons-fill", function (e) {
+    var feature = e.features[0];
+    var html = popupHTML(feature);
+    if (html) {
+      new maplibregl.Popup()
+        .setLngLat(e.lngLat)
+        .setHTML(html)
+        .addTo(map);
+    }
+  });
+
+  // Change cursor to pointer on hover over clickable features
+  ["geojson-points", "geojson-lines", "geojson-polygons-fill"].forEach(
+    function (layerId) {
+      map.on("mouseenter", layerId, function () {
+        map.getCanvas().style.cursor = "pointer";
+      });
+      map.on("mouseleave", layerId, function () {
+        map.getCanvas().style.cursor = "";
+      });
+    },
+  );
+
+  // Fit map to the data bounds
+  var bounds = new maplibregl.LngLatBounds();
+  flat.features.forEach(function (feature) {
+    var geom = feature.geometry;
+    if (!geom) return;
+    if (geom.type === "Point") {
+      bounds.extend(geom.coordinates);
+    } else if (geom.type === "LineString" || geom.type === "MultiPoint") {
+      geom.coordinates.forEach(function (c) {
+        bounds.extend(c);
+      });
+    } else if (geom.type === "Polygon" || geom.type === "MultiLineString") {
+      geom.coordinates.forEach(function (ring) {
+        ring.forEach(function (c) {
+          bounds.extend(c);
+        });
+      });
+    } else if (geom.type === "MultiPolygon") {
+      geom.coordinates.forEach(function (polygon) {
+        polygon.forEach(function (ring) {
+          ring.forEach(function (c) {
+            bounds.extend(c);
+          });
+        });
+      });
+    }
+  });
+  if (!bounds.isEmpty()) {
+    map.fitBounds(bounds, { padding: 40 });
+  }
+}
+
+function popupHTML(feature) {
+  if (feature.properties && feature.properties.name) {
+    var html = "<strong>" + feature.properties.name + "</strong>";
+    if (feature.properties.description) {
+      html += "<br />" + feature.properties.description;
+    }
+    return html;
+  }
+  return null;
+}
+
 document.addEventListener("DOMContentLoaded", function () {
-  create_map();
-  loadJSON(handle_geojson, get_map_name());
+  var map = new maplibregl.Map({
+    style: "https://tiles.openfreemap.org/styles/liberty",
+    center: [0, 30],
+    zoom: 2,
+    container: "map",
+  });
+
+  map.addControl(new maplibregl.ScaleControl({ unit: "metric" }));
+
+  map.on("load", function () {
+    fetch(get_map_name())
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (geojson) {
+        handle_geojson(map, geojson);
+      });
+  });
 });
