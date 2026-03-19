@@ -184,45 +184,19 @@ function addSourceAndLayers(map, flat) {
     },
   });
 
-  // Popups on click for points
-  map.on("click", "geojson-points", function (e) {
-    var feature = e.features[0];
-    var html = popupHTML(feature);
-    if (html) {
-      new maplibregl.Popup()
-        .setLngLat(e.lngLat)
-        .setHTML(html)
-        .addTo(map);
-    }
-  });
-
-  // Popups on click for lines
-  map.on("click", "geojson-lines", function (e) {
-    var feature = e.features[0];
-    var html = popupHTML(feature);
-    if (html) {
-      new maplibregl.Popup()
-        .setLngLat(e.lngLat)
-        .setHTML(html)
-        .addTo(map);
-    }
-  });
-
-  // Popups on click for polygons
-  map.on("click", "geojson-polygons-fill", function (e) {
-    var feature = e.features[0];
-    var html = popupHTML(feature);
-    if (html) {
-      new maplibregl.Popup()
-        .setLngLat(e.lngLat)
-        .setHTML(html)
-        .addTo(map);
-    }
-  });
-
-  // Change cursor to pointer on hover over clickable features
+  // Popups and cursor for clickable layers
   ["geojson-points", "geojson-lines", "geojson-polygons-fill"].forEach(
     function (layerId) {
+      map.on("click", layerId, function (e) {
+        var feature = e.features[0];
+        var html = popupHTML(feature);
+        if (html) {
+          new maplibregl.Popup()
+            .setLngLat(e.lngLat)
+            .setHTML(html)
+            .addTo(map);
+        }
+      });
       map.on("mouseenter", layerId, function () {
         map.getCanvas().style.cursor = "pointer";
       });
