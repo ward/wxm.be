@@ -1,8 +1,86 @@
 const DEFAULT_MAP = "visited";
 
+const US_VISITED_STATES = [
+  "California",
+  "Delaware",
+  "District of Columbia",
+  "Florida",
+  "Illinois",
+  "Kansas",
+  "Maryland",
+  "Nevada",
+  "New Jersey",
+  "New York",
+  "North Carolina",
+  "Pennsylvania",
+  "Puerto Rico",
+  "Utah",
+  "Virginia",
+  "Wisconsin",
+];
+
+const US_BEER_STATES = [
+  "Alaska",
+  "Arizona",
+  "California",
+  "Colorado",
+  "Connecticut",
+  "Delaware",
+  "District of Columbia",
+  "Florida",
+  "Georgia",
+  "Hawaii",
+  "Idaho",
+  "Illinois",
+  "Indiana",
+  "Louisiana",
+  "Maine",
+  "Maryland",
+  "Massachusetts",
+  "Michigan",
+  "Missouri",
+  "New Jersey",
+  "New York",
+  "North Carolina",
+  "Ohio",
+  "Oregon",
+  "Pennsylvania",
+  "South Carolina",
+  "Texas",
+  "Utah",
+  "Vermont",
+  "Virginia",
+  "Washington",
+  "Wisconsin",
+];
+
+/**
+ * Map entries can optionally specify highlight config for maps where the
+ * geojson contains all features (e.g., all US state boundaries) but only some
+ * should be visually emphasised. When set, applyHighlight() stamps a
+ * "highlighted" property on each feature at load time, and the paint
+ * expressions in addSourceAndLayers() use it to dim non-highlighted features.
+ *
+ *   highlightKey    - the feature property to match against (e.g., "NAME")
+ *   highlightValues - array of values that count as highlighted
+ *   file            - optional, geojson filename if different from the id
+ */
 const AVAILABLE_MAPS = [
   { id: "visited", label: "Visited" },
   { id: "countries", label: "Countries" },
+  {
+    id: "us-states",
+    label: "US States",
+    highlightKey: "NAME",
+    highlightValues: US_VISITED_STATES,
+  },
+  {
+    id: "us-states-beer",
+    label: "US States (Beer)",
+    file: "us-states",
+    highlightKey: "NAME",
+    highlightValues: US_BEER_STATES,
+  },
   { id: "westcoast2019", label: "West Coast 2019" },
 ];
 
@@ -86,19 +164,29 @@ class ProjectionToggleControl {
   }
 }
 
-// () -> String
 function get_map_name() {
   var params = new URLSearchParams(window.location.search);
   return params.get("i") || DEFAULT_MAP;
 }
 
+function getMapConfig(mapId) {
+  return AVAILABLE_MAPS.find(function (m) {
+    return m.id === mapId;
+  });
+}
+
 function loadAndShowGeoJSON(map, mapId) {
-  fetch(`geojson/${mapId}.geojson`)
+  var config = getMapConfig(mapId);
+  var file = (config && config.file) || mapId;
+  fetch(`geojson/${file}.geojson`)
     .then(function (response) {
       return response.json();
     })
     .then(function (geojson) {
       var flat = flattenFeatureCollection(geojson);
+      if (config && config.highlightKey) {
+        applyHighlight(flat, config.highlightKey, config.highlightValues);
+      }
       var source = map.getSource("geojson-data");
       if (source) {
         source.setData(flat);
@@ -109,9 +197,27 @@ function loadAndShowGeoJSON(map, mapId) {
     });
 }
 
-// Flatten nested FeatureCollections into a single flat FeatureCollection.
-// The GeoJSON files use FeatureCollections inside FeatureCollections (e.g.,
-// grouped by continent), which MapLibre does not support directly.
+/**
+ * Mark each feature as highlighted or not, based on the map config.
+ * Also copies the match key to "name" so popups work automatically.
+ */
+function applyHighlight(flat, key, values) {
+  flat.features.forEach(function (feature) {
+    if (feature.properties && feature.properties[key] !== undefined) {
+      feature.properties.highlighted =
+        values.indexOf(feature.properties[key]) !== -1;
+      if (!feature.properties.name) {
+        feature.properties.name = feature.properties[key];
+      }
+    }
+  });
+}
+
+/**
+ * Flatten nested FeatureCollections into a single flat FeatureCollection.
+ * The GeoJSON files use FeatureCollections inside FeatureCollections (e.g.,
+ * grouped by continent), which MapLibre does not support directly.
+ */
 function flattenFeatureCollection(geojson) {
   var features = [];
   function collect(obj) {
@@ -190,8 +296,15 @@ function addSourceAndLayers(map, flat) {
       ["==", ["geometry-type"], "MultiPolygon"],
     ],
     paint: {
-      "fill-color": "#3388ff",
-      "fill-opacity": 0.2,
+      // Features with highlighted=false are dimmed; features without the
+      // property (i.e., maps that don't use highlighting) get the default blue.
+      "fill-color": [
+        "case",
+        ["==", ["get", "highlighted"], false],
+        "#cccccc",
+        "#3388ff",
+      ],
+      "fill-opacity": ["case", ["==", ["get", "highlighted"], false], 0.1, 0.2],
     },
   });
   map.addLayer({
@@ -204,7 +317,12 @@ function addSourceAndLayers(map, flat) {
       ["==", ["geometry-type"], "MultiPolygon"],
     ],
     paint: {
-      "line-color": "#3388ff",
+      "line-color": [
+        "case",
+        ["==", ["get", "highlighted"], false],
+        "#999999",
+        "#3388ff",
+      ],
       "line-width": 2,
     },
   });
