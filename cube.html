@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Ward Muylaert" />
+    <title>Cube | Ward×Muylaert</title>
+    <link href="style.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+  </head>
+  <body itemscope itemtype="http://schema.org/Person">
+    <header>
+      <h1 itemprop="name">Ward×Muylaert</h1>
+      <meta itemprop="honorificPrefix" content="dr. ir." />
+      <nav>
+        <ul>
+          <li><a href="/">index</a></li>
+          <li><a href="//blog.wxm.be">blog</a></li>
+          <li><a href="//run.wxm.be">run</a></li>
+          <li><a href="//irc.wxm.be">irc</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <h1>Rubik's Cube</h1>
+      <p>
+        I did not come up with this way to solve the cube, I am just copying it
+        for easy access if I remember that this page exists.
+      </p>
+      <p>
+        Notation: <strong>U</strong>p, <strong>D</strong>own,
+        <strong>F</strong>ront, <strong>B</strong>ack, <strong>L</strong>eft,
+        <strong>R</strong>ight. Superscript <sup>-1</sup> = counterclockwise.
+      </p>
+
+      <h2>Layer 1: Top face</h2>
+
+      <ul>
+        <li>
+          Choose a face to solve first, keep it on top (<strong>U</strong>).
+        </li>
+        <li>
+          <strong>Edges first:</strong> Place the 4 edge pieces intuitively,
+          ensuring colours match on the side faces too. If an edge is in the
+          right position but flipped, hold the bad face as
+          <strong>F</strong> and run:
+          <code>F<sup>-1</sup> U L<sup>-1</sup> U<sup>-1</sup></code>
+        </li>
+        <li>
+          <strong>Corners:</strong> For each corner:
+          <ol>
+            <li>Bring the corner piece directly below where it needs to go.</li>
+            <li>
+              Orient the cube so that piece is in the
+              <strong>F-R-D</strong> corner.
+            </li>
+            <li>
+              Repeat <code>R<sup>-1</sup> D<sup>-1</sup> R D</code> until it
+              snaps into place correctly.
+            </li>
+          </ol>
+        </li>
+      </ul>
+
+      <h2>Layer 2: Middle layer</h2>
+
+      <ul>
+        <li>
+          Flip the cube so the solved layer is now <strong>D</strong> (and stays
+          there).
+        </li>
+        <li>
+          Find a middle-layer edge piece in <strong>U</strong>, rotate
+          <strong>U</strong> until its side colour matches the correct face,
+          then hold that face as <strong>F</strong>.
+        </li>
+        <li>
+          Run the appropriate algorithm depending on which direction the piece
+          needs to go:
+          <ul>
+            <li>
+              <strong>Left:</strong>
+              <code
+                >U<sup>-1</sup> L<sup>-1</sup> U L U F U<sup>-1</sup> F<sup
+                  >-1</sup
+                ></code
+              >
+            </li>
+            <li>
+              <strong>Right:</strong>
+              <code
+                >U R U<sup>-1</sup> R<sup>-1</sup> U<sup>-1</sup> F<sup>-1</sup>
+                U F</code
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          If a piece is already stuck in the middle layer (wrong position), use
+          either algorithm to kick it up to <strong>U</strong>, then re-insert
+          it.
+        </li>
+      </ul>
+
+      <h2>Layer 3: Top layer</h2>
+
+      <h3>Orient the edges (form a cross on top)</h3>
+
+      <p>
+        Only look at the top face colours for now; ignore side colours. Repeat
+        <code>F R U R<sup>-1</sup> U<sup>-1</sup> F<sup>-1</sup></code> as
+        needed:
+      </p>
+      <ol>
+        <li>
+          <strong>No edges correct</strong>: run the algorithm with any face as
+          <strong>F</strong>.
+        </li>
+        <li>
+          <strong>An "L" shape</strong>: hold the L in the upper-left of
+          <strong>U</strong>, run the algorithm.
+        </li>
+        <li>
+          <strong>A line</strong>: hold it parallel to <strong>F</strong>, run
+          the algorithm once more.
+        </li>
+      </ol>
+
+      <h3>Permute the edges (put them in the right place)</h3>
+
+      <p>
+        Rotate <strong>U</strong> until at least 2 edge pieces are in their
+        correct side position.
+      </p>
+      <ul>
+        <li>
+          <strong>Two correct edges opposite each other</strong>: hold one as
+          <strong>F</strong>, run
+          <code>R U R<sup>-1</sup> U R U<sup>2</sup> R<sup>-1</sup></code
+          >. This gives two adjacent correct edges.
+        </li>
+        <li>
+          <strong>Two correct edges adjacent</strong>: hold them at the
+          back-right, run
+          <code>R U R<sup>-1</sup> U R U<sup>2</sup> R<sup>-1</sup></code
+          >, then <code>U</code>.
+        </li>
+      </ul>
+
+      <h3>Permute the corners (right positions, ignore orientation)</h3>
+
+      <p>
+        Hold a correctly placed corner in the
+        <strong>bottom-right of U</strong> (if one exists). Repeat as needed:
+        <code
+          >U R U<sup>-1</sup> L<sup>-1</sup> U R<sup>-1</sup> U<sup>-1</sup>
+          L</code
+        >
+      </p>
+      <p>
+        If <strong>no corner is correct</strong>, any face will do. Run the
+        algorithm once to get one correct, then proceed.
+      </p>
+
+      <h3>Step 4: Orient the corners (final step)</h3>
+
+      <p>
+        Hold a misoriented corner in the <strong>bottom-right of U</strong> and
+        repeat <code>R<sup>-1</sup> D<sup>-1</sup> R D</code> until that corner
+        is correct. Then rotate <strong>U</strong> to bring the next misoriented
+        corner to the bottom-right and repeat.
+        <strong>Do not rotate the whole cube.</strong>
+      </p>
+      <p>
+        <strong>Note:</strong> The cube will look scrambled during this step,
+        that's normal. Once all corners are oriented, a final
+        <strong>U</strong> rotation should complete the solve.
+      </p>
+    </section>
+    <footer>
+      <p>Last updated on <time>2026-03-22</time>.</p>
+    </footer>
+  </body>
+</html>

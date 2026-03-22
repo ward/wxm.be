@@ -127,15 +127,21 @@ body section p {
   text-align: justify;
 }
 
-body section ul {
+body section ul, body section ol {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   line-height: 1.1;
   padding-left: 3em;
   padding-right: 2em;
-  list-style-type: "〰️ ";
+  list-style-type: disc;
   max-width: 34em;
   text-align: justify;
+}
+body section ul ul {
+  list-style-type: circle;
+}
+body section ol {
+  list-style-type: number;
 }
 body section a {
   color: darkviolet;
@@ -153,4 +159,16 @@ body footer {
   padding-bottom: 2em;
   font-size: small;
   grid-area: footer;
+}
+
+/** CSS reset broke this one */
+sup {
+  vertical-align: super;
+  font-size: 60%;
+}
+code {
+  font-family: monospace;
+}
+strong {
+  font-weight: bold;
 }
