@@ -14,6 +14,7 @@ const US_VISITED_STATES = [
   "North Carolina",
   "Pennsylvania",
   "Puerto Rico",
+  "Texas",
   "Utah",
   "Virginia",
   "Wisconsin",
@@ -74,6 +75,22 @@ const US_BEER_STATES = [
   // "Wyoming",
 ];
 
+// TODO: Probably should rethink a little how to show national parks. Pure on
+// land area, the map just looks kind of sad. Maybe use little logos or stars
+// for the parks.
+// National Parks and Forests data via
+// <https://observablehq.com/@erincaughey/national-parks-geojson>.
+const US_VISITED_PARKS = [
+  "Big Bend",
+  "Bryce Canyon",
+  "Capitol Reef",
+  "Death Valley",
+  "Everglades",
+  "Sequoia", // Dont think we technically went into King's Canyon?
+  "Yosemite",
+  "Zion",
+];
+
 /**
  * Map entries can optionally specify highlight config for maps where the
  * geojson contains all features (e.g., all US state boundaries) but only some
@@ -101,9 +118,20 @@ const AVAILABLE_MAPS = [
     highlightKey: "NAME",
     highlightValues: US_BEER_STATES,
   },
+  {
+    id: "us-national-parks",
+    label: "US National Parks",
+    highlightKey: "UNIT_NAME",
+    highlightValues: US_VISITED_PARKS,
+  },
   { id: "westcoast2019", label: "West Coast 2019" },
 ];
 
+/**
+ * Custom MapLibre control. Reads from global AVAILABLE_MAPS to create a
+ * dropdown list for the user to select one. On selection, passes the `id` to
+ * the given onSelect function.
+ */
 class MapSelectorControl {
   constructor(currentMapId, onSelect) {
     this._currentMapId = currentMapId;
@@ -118,6 +146,7 @@ class MapSelectorControl {
     select.style.padding = "4px 8px";
     select.style.fontSize = "14px";
 
+    // TODO: Make AVAILABLE_MAPS something that is passed to the constructor.
     AVAILABLE_MAPS.forEach(
       function (m) {
         var option = document.createElement("option");
