@@ -2,10 +2,20 @@ body {
   max-width: 40em;
   margin: 0px auto;
 }
-table, tr, td, th {
+table,
+tr,
+td,
+th {
   border-collapse: collapse;
   border: 1px solid black;
 }
+td,
+th {
+  padding: 0.05em 0.3em;
+}
 td:nth-child(2) {
   text-align: right;
+}
+#birthdays:not(:has(tbody tr)) {
+  display: none;
 }

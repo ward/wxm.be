@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -9,14 +9,32 @@
   <body>
     <h1>Seconds!</h1>
     <h2>Now</h2>
-    <p>Current time of day is <span id="current-time-seconds"></span>s (~<span id="current-time-ks"></span>ks).</p>
+    <p>
+      Current time of day is <span id="current-time-seconds"></span>s (~<span
+        id="current-time-ks"
+      ></span
+      >ks).
+    </p>
 
     <h2>Birthday</h2>
-    <p>Your birthday: <input type="date" id="birthday-date" /><input type="time" id="birthday-time" />
-    →
-    <span id="age-seconds"></span>s old
-    (~<span id="age-megaseconds"></span>Ms).</p>
-    <p>Your Gigasecond birthday is <span id="gs-birthday"></span>.</p>
+    <p>
+      <label for="birthday-date">Your birthday:</label>
+      <input type="date" id="birthday-date" />
+      <label for="birthday-time">at</label>
+      <input type="time" id="birthday-time" />
+      →
+      <span id="age-seconds"></span>s old (~<span id="age-megaseconds"></span
+      >Ms).
+    </p>
+    <table id="birthdays">
+      <thead>
+        <tr>
+          <th>What</th>
+          <th>When</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
 
     <h2>Conversions</h2>
     <table>
