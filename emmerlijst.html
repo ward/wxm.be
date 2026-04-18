@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Ward Muylaert" />
+    <title>Emmerlijst | Ward×Muylaert</title>
+    <link href="style.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+    <style>
+      .emmerlijst {
+        list-style: none;
+      }
+      .emmerlijst li::before {
+        content: "☐ ";
+      }
+      .emmerlijst li.completed::before {
+        content: "☑ ";
+      }
+    </style>
+  </head>
+  <body itemscope itemtype="http://schema.org/Person">
+    <header>
+      <h1 itemprop="name">Ward×Muylaert</h1>
+      <meta itemprop="honorificPrefix" content="dr. ir." />
+      <nav>
+        <ul>
+          <li><a href="/">index</a></li>
+          <li><a href="//blog.wxm.be">blog</a></li>
+          <li><a href="//run.wxm.be">run</a></li>
+          <li><a href="//irc.wxm.be">irc</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <h1>Emmerlijst</h1>
+      <p>
+        Vaguely in order of interest, though unsure yet what to do once
+        completed. Sequoia definitely was number one, so that is easy enough to
+        keep at the top for now.
+      </p>
+      <ul class="emmerlijst">
+        <li class="completed">
+          Sequoia trees; visited in June 2025, was amazing
+        </li>
+        <li>Geysers in Yellowstone NP, Wyoming</li>
+        <li>Petrified Forest NP, Arizona</li>
+        <li>See hot lava</li>
+        <li>Japan (and bullet train)</li>
+        <li>Do a walk-and-camp trek of 2+ nights</li>
+        <li>Grand Canyon, Arizona</li>
+        <li>China: Don's village and megacities</li>
+        <li>Go to any place in Africa</li>
+        <li>Go to space for 36+ hours</li>
+        <li>PCT (significant parts of)</li>
+      </ul>
+    </section>
+    <footer>
+      <p>Last updated on <time>2026-04-18</time>.</p>
+    </footer>
+  </body>
+</html>
